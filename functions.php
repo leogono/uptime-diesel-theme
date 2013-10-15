@@ -53,3 +53,36 @@ function contact_s($atts, $content = null) {
 	return $contactUs;
 }
 add_shortcode('contact', 'contact_s');
+
+
+/** Force full width layout on single posts only*/
+add_filter( 'genesis_pre_get_option_site_layout', 'full_width_layout_single_posts' );
+function full_width_layout_single_posts( $opt ) {
+if ( is_single() ) {
+    $opt = 'sidebar-content'; 
+    return $opt;
+ 
+    }
+ 
+}
+
+add_action( 'genesis_after_header', 'be_change_sidebar_order' );
+/**
+ * Swap Primary and Secondary Sidebars on Sidebar-Sidebar-Content
+ *
+ * @author Bill Erickson
+ * @link http://www.billerickson.net/switch-genesis-sidebars/
+ */
+function be_change_sidebar_order() {
+ 
+    $site_layout = genesis_site_layout();
+ 
+    if ( 'sidebar-content' == $site_layout ) {
+        // Remove the Primary Sidebar from the Primary Sidebar area.
+        remove_action( 'genesis_sidebar', 'genesis_do_sidebar' );
+ 
+        // Place the Secondary Sidebar into the Primary Sidebar area.
+        add_action( 'genesis_sidebar', 'genesis_do_sidebar_alt' );
+    }
+ 
+}
