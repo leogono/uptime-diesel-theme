@@ -1464,20 +1464,22 @@ Footer Widgets
 ---------------------------------------------------------------------------------------------------- */
 
 .footer-widgets {
-	background-color: #333;
+	background-color: #111;
 	color: #999;
 	clear: both;
 	padding: 40px 0 16px;
 	padding: 4rem 0 1.6rem;
 }
-
-.footer-widgets-1,
+.footer-widgets-1{
+	width: 210px;
+}
 .footer-widgets-3 {
-	width: 350px;
+	width: 260px;
+	text-align: center;
 }
 
 .footer-widgets-2 {
-	width: 360px;
+	width: 620px;
 }
 
 .footer-widgets-1 {
@@ -1495,12 +1497,23 @@ Footer Widgets
 }
 
 .footer-widgets a {
-	border-bottom: 1px solid #666;
-	color: #999;
+	color: #fff;
 }
 
 .footer-widgets a:hover {
-	color: #ddd;
+	color: #FFF200;
+}
+.footer-widgets .contact-us a {
+	color: #FFF200;
+}
+.footer-widgets .contact-us a:hover {
+	color: #ffa205;
+}
+.footer-widgets a.btn {
+	color: #333;
+}
+.footer-widgets a.btn:hover {
+	color: #fff;
 }
 
 .footer-widgets .widget {
@@ -1517,8 +1530,16 @@ Footer Widgets
 	margin-bottom: 6px;
 	margin-bottom: 0.6rem;
 	word-wrap: break-word;
+	float: left;
+	padding-right: 10px;
+	margin-left: 10px;
+	border-right: 1px solid #fff;
+	line-height: 1.3;
 }
-
+.footer-widgets li:last-child {
+	border: none;
+	padding-right: 0;
+}
 .footer-widgets .search-form input:focus {
 	border: 1px solid #ddd;
 }
@@ -1587,9 +1608,15 @@ Media Queries
 		width: 400px;
 	}
 
-	.footer-widgets-1,
-	.footer-widgets-2,
-	.footer-widgets-3,
+	.footer-widgets-1 {
+		width: 180px;
+	}
+	.footer-widgets-2 {
+		width: 490px;
+	}
+	.footer-widgets-3 {
+		width: 240px;
+	}
 	.sidebar-primary,
 	.title-area {
 		width: 300px;
