@@ -695,7 +695,6 @@ img.alignright,
 .widget-title {
 	font-size: 16px;
 	font-size: 1.6rem;
-	font-weight: 900;
 	margin-bottom: 24px;
 	margin-bottom: 2.4rem;
 	text-transform: uppercase;
@@ -930,6 +929,7 @@ Site Header
 	font-size: 1.8rem;
 	margin-bottom: 10px;
 	font-family: 'Lato', sans-serif;
+	font-weight: 900;
 }
 
 .site-header .search-form {
@@ -1426,6 +1426,34 @@ Sidebars
 .sidebar .contact-details li.time{
 	background-position: -10px -579px;
 }
+
+.widget_hms_testimonial_rotator {
+	background: #ebebeb;
+	padding: 20px 40px;
+	position: relative;
+}
+.widget_hms_testimonial_rotator .widget-wrap:after {
+	content: ' ';
+	background: url('images/main-sprite.png') no-repeat -11px -63px;
+	width: 35px;
+	height: 35px;
+	display: block;
+	position: absolute;
+	top: 20px;
+	left: -17px;
+}
+.hms-testimonial-container .testimonial {
+	color: #666;
+	font-size: 20px;
+	font-size: 2rem;
+	font-style: italic;
+	line-height: 26px;
+	line-height: 2.6rem;
+	margin-bottom: 10px;
+}
+.hms-testimonial-container .author {
+	text-align: right;
+}
 /*
 Footer Widgets
 ---------------------------------------------------------------------------------------------------- */
@@ -1619,6 +1647,18 @@ Media Queries
 		padding: 0;
 	}
 
+	.site-header .widget-area .widget {
+		padding: 0 5%;
+		min-height: 60px;
+	}
+	.site-header .contact-us {
+		top: 0;
+		right: 5%;
+	}
+	.widget.widget_hms_testimonial_rotator {
+		padding: 20px 30px;
+	}
+
 	.genesis-nav-menu li,
 	.site-header ul.genesis-nav-menu,
 	.site-header .search-form {
@@ -1679,8 +1719,15 @@ Media Queries
 	.site-header {
 		height: auto;
 	}
+	.site-header .widget-area .widget {
+		text-align: center;
+		margin-bottom: 15px;
+	}
 	.site-header .contact-us {
 		position: relative;
+		right: auto;
+		top: auto;
+		margin-bottom: 20px;
 	}
 	.five-sixths,
 	.four-sixths,
