@@ -1161,10 +1161,13 @@ Content Area
 	margin-bottom: 2.6rem;
 }
 
-.entry-content ol,
-.entry-content ul {
+.entry-content ol {
 	margin-left: 40px;
 	margin-left: 4rem;
+}
+.entry-content ul {
+	margin-left: 20px;
+	margin-left: 2rem;
 }
 
 .entry-content ol li {
@@ -1172,7 +1175,9 @@ Content Area
 }
 
 .entry-content ul li {
-	list-style-type: disc;
+	list-style-type: none;
+	background: url('images/main-sprite.png') no-repeat -10px -714px;
+	padding-left: 20px;
 }
 
 .entry-content ol ol,
@@ -1573,7 +1578,7 @@ Media Queries
 
 	.content,
 	.site-header .widget-area {
-		width: 620px;
+		width: 660px;
 	}
 
 	.sidebar-content-sidebar .content,
