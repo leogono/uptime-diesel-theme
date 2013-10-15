@@ -46,7 +46,7 @@ function contact_s($atts, $content = null) {
 	$contactUs .= '<div class="contact-us">';
 	$contactUs .= '<p>Call us now</p>';
 	$contactUs .= '<p class="tel">'.$phone.'</p>';
-	$contactUs .= '<p><a href="#" class="btn btn-contact">Click Here to Book Online</a></p>';
+	$contactUs .= '<p><a href="'.$url'" class="btn btn-contact">Click Here to Book Online</a></p>';
 	$contactUs .= '</div>';
 
 
