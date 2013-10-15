@@ -482,6 +482,13 @@ Structure and Layout
 .content-sidebar-sidebar .sidebar-secondary {
 	float: right;
 }
+.sidebar-content .content-sidebar-wrap .sidebar {
+	width: 180px;
+	background: #EBEBEB;
+}
+.sidebar-content .content-sidebar-wrap .content {
+	width: 920px;
+}
 
 /* Column Classes
 	Link: http://twitter.github.io/bootstrap/assets/css/bootstrap-responsive.css
@@ -1421,12 +1428,14 @@ Sidebars
 	text-transform: uppercase;
 }
 .sidebar .menu li a:hover,
-.sidebar .menu .current_page_item > a {
+.sidebar .menu .current_page_item > a,
+..sidebar .menu .current_page_parent > a {
 	color: #fff200;
 	background: #252525;
 	border-color: #252525;
 }
-.sidebar-secondary .widget-title {
+.sidebar-secondary .widget-title,
+.sidebar-content .content-sidebar-wrap .sidebar-primary .widget-title {
 	color: #fff200;
 	background: #252525;
 	font-size: 30px;
@@ -1434,6 +1443,7 @@ Sidebars
 	text-align: center;
 	font-weight: 400;
 	letter-spacing: 1.2px;
+	margin-bottom: 10px;
 }
 .sidebar .contact-details {
 	padding: 10px;
@@ -1476,7 +1486,12 @@ Sidebars
 	line-height: 2.6rem;
 	margin-bottom: 10px;
 }
-.hms-testimonial-container .author {
+.hms-testimonial-container {
+	margin-bottom: 15px;
+}
+.hms-testimonial-container .author,
+.hms-testimonial-container .url,
+.hms-testimonial-container .date {
 	text-align: right;
 }
 /*
@@ -1696,6 +1711,12 @@ Media Queries
 	.sidebar-sidebar-content .content-sidebar-wrap {
 		width: 740px;
 	}
+	.sidebar-content .content-sidebar-wrap .sidebar {
+		width: 180px;
+	}
+	.sidebar-content .content-sidebar-wrap .content {
+		width: 740px;
+	}
 
 	.content,
 	.site-header .widget-area {
@@ -1746,6 +1767,11 @@ Media Queries
 	.site-inner,
 	.title-area,
 	.wrap {
+		width: 100%;
+	}
+
+	.sidebar-content .content-sidebar-wrap .sidebar,
+	.sidebar-content .content-sidebar-wrap .content  {
 		width: 100%;
 	}
 
