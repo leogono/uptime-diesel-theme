@@ -1612,7 +1612,6 @@ Media Queries
 		background: url('images/main-sprite@2x.png') no-repeat -11px -712px;
 		background-size: 67px 1242px;
 	}
-
 }
 
 @media only screen and (max-width: 1139px) {
