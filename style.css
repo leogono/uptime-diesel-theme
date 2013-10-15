@@ -134,7 +134,7 @@ html {
 
 body {
 	background-color: #fff;
-	color: #666;
+	color: #333;
 	font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	font-size: 16px;
 	font-size: 1.6rem;
@@ -1135,8 +1135,8 @@ Content Area
 	border-radius: 3px;
 	margin-bottom: 40px;
 	margin-bottom: 4rem;
-	padding: 40px 40px 24px;
-	padding: 4rem 4rem 2.4rem;
+	padding: 0 40px 24px;
+	padding: 0 4rem 2.4rem;
 }
 
 .entry-content a {
@@ -1348,7 +1348,7 @@ Sidebars
 ---------------------------------------------------------------------------------------------------- */
 
 .sidebar {
-	color: #999;
+	color: #666;
 }
 
 .sidebar a {
@@ -1371,19 +1371,61 @@ Sidebars
 }
 
 .sidebar .widget {
-	background-color: #fff;
 	border-radius: 3px;
 	margin-bottom: 40px;
 	margin-bottom: 4rem;
-	padding: 40px;
-	padding: 4rem;
 }
 
 .sidebar .enews-widget {
 	background-color: #333;
 }
-
-
+.sidebar-secondary {
+	background: #ebebeb;
+}
+.sidebar .menu {
+	font-size: 20px;
+	font-size: 2rem;
+	text-align: center;
+	overflow: hidden;
+}
+.sidebar .menu li a {
+	color: #333;
+	padding: 10px;
+	text-decoration: none;
+	display: block;
+	text-transform: uppercase;
+}
+.sidebar .menu li a:hover,
+.sidebar .menu .current_page_item > a {
+	color: #fff200;
+	background: #252525;
+	border-color: #252525;
+}
+.sidebar-secondary .widget-title {
+	color: #fff200;
+	background: #252525;
+	font-size: 30px;
+	padding: 10px;
+	text-align: center;
+	font-weight: 400;
+	letter-spacing: 1.2px;
+}
+.sidebar .contact-details {
+	padding: 10px;
+}
+.sidebar .contact-details li {
+	padding-left: 25px;
+	background: url('images/main-sprite.png') no-repeat;
+}
+.sidebar .contact-details li.phone {
+	background-position: -11px -196px;
+}
+.sidebar .contact-details li.map-marker {
+	background-position: -8px -380px;
+}
+.sidebar .contact-details li.time{
+	background-position: -10px -579px;
+}
 /*
 Footer Widgets
 ---------------------------------------------------------------------------------------------------- */
@@ -1636,6 +1678,9 @@ Media Queries
 @media only screen and (max-width: 767px) {
 	.site-header {
 		height: auto;
+	}
+	.site-header .contact-us {
+		position: relative;
 	}
 	.five-sixths,
 	.four-sixths,
