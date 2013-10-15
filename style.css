@@ -1429,7 +1429,7 @@ Sidebars
 }
 .sidebar .menu li a:hover,
 .sidebar .menu .current_page_item > a,
-..sidebar .menu .current_page_parent > a {
+.sidebar .menu .current_page_parent > a {
 	color: #fff200;
 	background: #252525;
 	border-color: #252525;
