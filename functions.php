@@ -11,6 +11,7 @@ define( 'CHILD_THEME_VERSION', '2.0.1' );
 add_action( 'wp_enqueue_scripts', 'genesis_google_fonts' );
 function genesis_google_fonts() {
 	wp_enqueue_style( 'google-font', '//fonts.googleapis.com/css?family=Lato:400,900,400italic|Anton', array(), CHILD_THEME_VERSION );
+	wp_enqueue_script( 'respond-js', get_stylesheet_directory_uri() . '/js/respond.min.js', array(), '1.3.0', false );
 }
 
 //* Add HTML5 markup structure
