@@ -1473,6 +1473,8 @@ Footer Widgets
 	clear: both;
 	padding: 40px 0 16px;
 	padding: 4rem 0 1.6rem;
+	font-size: 14px;
+	font-size: 1.4rem;
 }
 .footer-widgets-1{
 	width: 210px;
@@ -1495,7 +1497,12 @@ Footer Widgets
 .footer-widgets-2 {
 	float: left;
 }
-
+.footer-widgets-1 .widget-title {
+	font-family: 'Lato', sans-serif;
+	font-size: 24px;
+	font-size: 2.4rem;
+	margin-bottom: 0;
+}
 .footer-widgets-3 {
 	float: right;
 }
@@ -1514,7 +1521,7 @@ Footer Widgets
 	color: #ffa205;
 }
 .footer-widgets a.btn {
-	color: #333;
+	color: #0D0D0D;
 }
 .footer-widgets a.btn:hover {
 	color: #fff;
@@ -1583,7 +1590,27 @@ Media Queries
 
 	.header-image .site-header .wrap {
 		background: url(images/logo@2x.png) no-repeat left;
-		background-size: 320px 164px;
+		background-size: 299px 164px;
+	}
+	.widget_hms_testimonial_rotator .widget-wrap::after {
+		background: url('images/main-sprite@2x.png') no-repeat -13px -62px;
+		background-size: 67px 1242px;
+	}
+	.sidebar .contact-details li.phone {
+		background: url('images/main-sprite@2x.png') no-repeat -11px -200px;
+		background-size: 67px 1242px;
+	}
+	.sidebar .contact-details li.map-marker {
+		background: url('images/main-sprite@2x.png') no-repeat -12px -385px;
+		background-size: 67px 1242px;
+	}
+	.sidebar .contact-details li.time {
+		background: url('images/main-sprite@2x.png') no-repeat -11px -584px;
+		background-size: 67px 1242px;
+	}
+	.entry-content ul li {
+		background: url('images/main-sprite@2x.png') no-repeat -11px -712px;
+		background-size: 67px 1242px;
 	}
 
 }
@@ -1735,6 +1762,11 @@ Media Queries
 		padding: 40px;
 		padding: 4rem;
 	}
+	.sidebar .contact-details {
+		padding: 10px 40px;
+		max-width: 360px;
+		margin: 0 auto;
+	}
 
 	.site-footer {
 		padding: 24px 0;
@@ -1748,6 +1780,16 @@ Media Queries
 	.footer-widgets-1 {
 		margin: 0;
 	}
+	.footer-widgets-1 {
+		text-align: center;
+	}
+	.footer-widgets-2 li {
+		float: none;
+		text-align: center;
+		border: none;
+	}
+	.footer-widgets-3 {
+	}
 
 }
 
@@ -1755,9 +1797,17 @@ Media Queries
 	.site-header {
 		height: auto;
 	}
+	.site-header .widget-area .widget-title {
+		font-size: 16px;
+		font-size: 1.6rem;
+	}
 	.site-header .widget-area .widget {
 		text-align: center;
 		margin-bottom: 15px;
+	}
+	.header-image .site-header .widget-area {
+		font-size: 13px;
+		font-size: 1.3rem;
 	}
 	.site-header .contact-us {
 		position: relative;
