@@ -42,12 +42,12 @@ add_filter('widget_text', 'do_shortcode');
 function contact_s($atts, $content = null) {
 	extract(shortcode_atts(array(
     'phone'	=> '0409 227 527',
-    'url'		=>	''
+    'url'		=> 'book-now'
 	), $atts));
 	$contactUs .= '<div class="contact-us">';
 	$contactUs .= '<p>Call us now</p>';
 	$contactUs .= '<p class="tel">'.$phone.'</p>';
-	$contactUs .= '<p><a href="'.$url.'" class="btn btn-contact">Click Here to Book Online</a></p>';
+	$contactUs .= '<p><a href="'.get_bloginfo( 'url' ).'/'.$url.'" class="btn btn-contact">Click Here to Book Online</a></p>';
 	$contactUs .= '</div>';
 
 
