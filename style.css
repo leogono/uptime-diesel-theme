@@ -348,7 +348,7 @@ input:hover[type="reset"],
 input:hover[type="submit"],
 .button:hover,
 .entry-content .button:hover {
-	background-color: #f15123;
+	background-color: #ff9200;
 }
 
 .entry-content .button:hover {
@@ -765,7 +765,7 @@ Plugins
 }
 
 .enews-widget input[type="submit"] {
-	background-color: #f15123;
+	background-color: #ff9200;
 	color: #fff;
 	margin: 0;
 	width: 100%;
@@ -1150,7 +1150,7 @@ Content Area
 
 .entry-content a {
 	border-bottom: 1px solid #ddd;
-	color: #f15123;
+	color: #ff9200;
 }
 
 .entry-content a:hover {
@@ -1259,7 +1259,7 @@ Content Area
 
 .archive-pagination li a:hover,
 .archive-pagination li.active a {
-	background-color: #f15123;
+	background-color: #ff9200;
 }
 
 .entry-pagination a {
