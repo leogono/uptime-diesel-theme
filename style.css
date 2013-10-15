@@ -1147,6 +1147,14 @@ Content Area
 	padding: 0 40px 24px;
 	padding: 0 4rem 2.4rem;
 }
+.entry-content h1,
+.entry-content h2,
+.entry-content h3,
+.entry-content h4,
+.entry-content h5 {
+	font-family: 'Lato', sans-serif;
+	font-weight: 900;
+}
 
 .entry-content a {
 	border-bottom: 1px solid #ddd;
@@ -1586,7 +1594,61 @@ Site Footer
 	margin-bottom: 0;
 }
 
-
+/*
+Contact Form 7
+----------------------------------------*/
+.wpcf7 input,
+.wpcf7 select,
+.wpcf7 textarea {
+	padding: 10px;
+	padding: 1rem;
+	background: #efefef;
+	border: none;
+	border: 1px solid #efefef;
+	max-width: 500px;
+	margin-bottom: 10px;
+}
+.wpcf7 input:focus,
+.wpcf7 select:focus,
+.wpcf7 textarea:focus {
+	background: #f8f8f8;
+}
+.wpcf7 .book-now #yname {
+	width: 150px;
+	margin-right: 10px;
+	margin-bottom: 10px;
+}
+.wpcf7 .book-now #comp-name,
+.wpcf7 .book-now #pnumber,
+#email-address {
+	width: 250px;
+}
+.wpcf7 .book-now .wpcf7-select  {
+	height: 37px;
+}
+#location-address,
+#location-suburb {
+	
+}
+#preferred-date,
+#preffered-time {
+	width: 180px;
+}
+#preferred-date {
+	margin-right: 10px;
+}
+#book-now {
+	background: #ffc003;
+	border: none;
+	padding: 10px 20px;
+	color: #000;
+	border-bottom: 4px solid #ffac00;
+	margin-top: 15px;
+}
+#book-now:hover {
+	background: #ffac00;
+	border-color: #ffc003;
+}
 /*
 Media Queries
 ---------------------------------------------------------------------------------------------------- */
