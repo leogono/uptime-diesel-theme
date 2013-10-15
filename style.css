@@ -944,6 +944,12 @@ Site Header
 	right: 0;
 	text-align: center;
 }
+.contact-us a {
+	color: #fff200;
+}
+.contact-us a:hover {
+	color: #ffa205;
+}
 .contact-us p {
 	color: #fff;
 	font-size: 24px;
@@ -960,12 +966,14 @@ Site Header
 	line-height: 34px;
 	margin-bottom: 5px;
 }
-.contact-us .btn-contact {
-
+.contact-us a.btn {
+	color: #0d0d0d;
+}
+.contact-us a.btn:hover {
+	color: #fff;
 }
 .btn {
 	background: #ffc003;
-	color: #0d0d0d;
 	padding: 10px 20px;
 	font-size: 16px;
 	font-size: 1.6rem;

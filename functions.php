@@ -28,6 +28,13 @@ add_theme_support( 'genesis-footer-widgets', 3 );
 //* Remove the site description
 remove_action( 'genesis_site_description', 'genesis_seo_site_description' );
 
+//* Change the footer text
+add_filter('genesis_footer_creds_text', 'sp_footer_creds_filter');
+function sp_footer_creds_filter( $creds ) {
+	$creds = 'Copyright [footer_copyright] &middot; <a href="'.get_bloginfo( 'url' ).'">Uptime Diesel</a>';
+	return $creds;
+}
+
 add_filter('widget_text', 'do_shortcode');
 
 //add shortcode with attribs
