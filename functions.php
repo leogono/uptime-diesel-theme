@@ -87,3 +87,8 @@ function be_change_sidebar_order() {
     }
  
 }
+
+function do_sidebar_alt_icon() {
+	echo '<div class="wren-icon"></div>';
+}
+add_action('genesis_after_sidebar_alt_widget_area', 'do_sidebar_alt_icon');

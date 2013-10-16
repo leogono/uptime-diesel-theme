@@ -1494,6 +1494,13 @@ Sidebars
 .hms-testimonial-container .date {
 	text-align: right;
 }
+.wren-icon {
+	background: url('images/main-sprite.png') no-repeat -13px -8px;
+	width: 35px;
+	height: 35px;
+	margin: 0 auto;
+	margin-bottom: -17px;
+}
 /*
 Footer Widgets
 ---------------------------------------------------------------------------------------------------- */
@@ -1695,6 +1702,10 @@ Media Queries
 	}
 	.entry-content ul li {
 		background: url('images/main-sprite@2x.png') no-repeat -11px -712px;
+		background-size: 67px 1242px;
+	}
+	.wren-icon {
+		background: url('images/main-sprite@2x.png') no-repeat -13px -8px;
 		background-size: 67px 1242px;
 	}
 }
