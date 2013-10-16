@@ -92,3 +92,54 @@ function do_sidebar_alt_icon() {
 	echo '<div class="wren-icon"></div>';
 }
 add_action('genesis_after_sidebar_alt_widget_area', 'do_sidebar_alt_icon');
+
+// Custom Post Type
+register_post_type('crews', array(	'label' => 'Crews','description' => 'A list of previous works created.','public' => true,'show_ui' => true,'show_in_menu' => true,'capability_type' => 'post','hierarchical' => false,'rewrite' => array('slug' => 'crews'),'query_var' => true,'supports' => array('title','editor','excerpt','custom-fields','comments','revisions','thumbnail','author','page-attributes',),'labels' => array (
+  'name' => 'Crews',
+  'singular_name' => 'Crew',
+  'menu_name' => 'Crews',
+  'add_new' => 'Add Crew',
+  'add_new_item' => 'Add New Crew',
+  'edit' => 'Edit',
+  'edit_item' => 'Edit Crew',
+  'new_item' => 'New Crew',
+  'view' => 'View Crew',
+  'view_item' => 'View Crew',
+  'search_items' => 'Search Crews',
+  'not_found' => 'No Crews Found',
+  'not_found_in_trash' => 'No Crews Found in Trash',
+  'parent' => 'Parent Crew',
+),) );
+
+add_image_size( 'crew-photo', 150, 150, TRUE );
+
+function do_crew_member_loop() {
+	if(is_page('about')) {
+		$args = array(
+			'post_type' => 'crews',
+			'posts_per_page' => -1
+		);
+		$the_query = new WP_Query( $args );
+		echo '<ul class="crew-list">';
+		// The Loop
+		if ( $the_query->have_posts() ) {
+			while ( $the_query->have_posts() ) {
+				$the_query->the_post(); ?>
+				<li>
+					<?php if ( has_post_thumbnail() ) {
+						the_post_thumbnail('thumbnail', array('class' => 'crew-avatar'));
+					} ?>
+					<h3 class="crew-name"><?php the_title(); ?></h3>
+					<div class="crew-desc"><?php the_content(); ?></div>
+				</li>
+				<?php
+			}
+		} else {
+			// no posts found
+		}
+		echo '</ul>';
+		/* Restore original Post Data */
+		wp_reset_postdata();
+	}
+}
+add_action( 'genesis_after_entry', 'do_crew_member_loop' );
